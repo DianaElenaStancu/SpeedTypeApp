@@ -4,6 +4,7 @@ const textInputElement = document.getElementById('textInput');
 const timerElement = document.getElementById('timer');
 const speedElement= document.getElementById('speed');
 var startedTimer = 0;
+var textLength = 0;
 
 //functii
 function isAlpha(ch){
@@ -35,6 +36,7 @@ function startTimer() {
 
 function renderNewText() {
   const text = textDisplayElement.innerText;
+  textLength = textDisplayElement.innerText.length;
   textDisplayElement.innerHTML = '';
   text.split('').forEach(character => {
     const characterSpan = document.createElement('span');
@@ -43,6 +45,7 @@ function renderNewText() {
   })
   textInputElement.value = null;
 }
+
 
 renderNewText();
 
@@ -54,7 +57,6 @@ textInputElement.addEventListener('input', () => {
   var correct_words = 0;
   var mistakes = 0;
   let isCorrect = true;
-
   //pentru fiecare caracter se verifica daca corespunde cu elementul din textul dat
   arrayText.forEach((characterSpan, index) => {
     startTimer();
@@ -82,7 +84,8 @@ textInputElement.addEventListener('input', () => {
       isCorrect = false;
     }
   })
-  if(isCorrect){
+
+  if(isCorrect || textInputElement.value.length === textLength){
     document.getElementById('correct_words').innerText = correct_words;
     document.getElementById('total_words').innerText = total_words;
     document.getElementById('final_time').innerText = Math.floor((new Date() - startTime) / 1000);
