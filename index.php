@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
-  <title> Cât de repede tastezi?</title>
+  <title>How fast do you type?</title>
 </head>
 <body>
   <div class="timer" id="timer"></div>
@@ -32,18 +32,18 @@
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="statsModalTitle">Statistici</h5>
+                  <h5 class="modal-title" id="statsModalTitle">Statistics</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
               </div>
               <div class="modal-body">
-                  <p> Felicitări! Mai jos sunt rezultatele tale: </p>
-                  <p>Cuvinte total: <span id='total_words'></span></p>
-                  <p>Cuvinte punctate: <span id='correct_words'></span></p>
-                  <p>Greșeli: <span id='mistakes'></span></p>
-                  <p>Timp: <span id='final_time'></span></p>
-                  <p>Viteză: <span id='speed'></span> cuvinte pe minut</p>
+                  <p> Congratulations! Here are your results: </p>
+                  <p>Total number of words: <span id='total_words'></span></p>
+                  <p>The number of correct words: <span id='correct_words'></span></p>
+                  <p>The number of mistakes: <span id='mistakes'></span></p>
+                  <p>Time: <span id='final_time'></span></p>
+                  <p>Speed: <span id='speed'></span> cuvinte pe minut</p>
 
               </div>
               <div class="modal-footer">
